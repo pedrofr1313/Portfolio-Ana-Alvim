@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 import { useState } from 'react'
 import { motion, AnimatePresence } from "motion/react"
 import { useMenu } from '../hooks/MenuContext'
@@ -39,56 +39,35 @@ const { isMenuOpen, toggleMenu } = useMenu();
         animate={{ opacity: 1, y: 0 }} // Aparece suavemente
         exit={{ opacity: 0, y: -1000 }} // Sai suavemente ao fechar
         transition={{ duration: 0.8 }} // Tempo da animação 
-        className="fixed dropdown-menu z-10 left-19 top-5 w-250 h-3/4 bg-neutral-950 z-10 text-white flex flex-col justify-center items-center overflow-y-auto rounded-lg pl-10 shadow-lg pt-32">
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
+        className="fixed dropdown-menu z-10 left-19 top-5 w-2/3 h-3/4 bg-neutral-950 z-10 text-white flex flex-col justify-center items-center overflow-y-auto rounded-lg  shadow-lg ">
+         <div className="py-1 px-4 flex w-4/4 justify-center">
           { isInEnglish ?
-          <a href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">CASA ÂMBAR </a>
-         
-:    <a href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">CASA ÂMBAR </a>     }
+          <Link to="/Sobre"><a href="#"  onClick={() => toggleMenu()} id='sobre' className="ç py-2 font-elza hover:italic hover:underline hover:text-[#CC3333] px-4  te text-center hover:underline hover:text-[#CC3333]  text-4xl ">ABOUT ME</a></Link>
+          :   <Link to="/Sobre"> <a  onClick={() => toggleMenu()} href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-4xl ">SOBRE </a> </Link>    }
           </div>
 
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
+          <div className="py-1 px-4 flex w-4/4 justify-center border-gray-700">
           { isInEnglish ?
-          <a href="#" id='sobre' className="ç py-2 font-elza hover:italic hover:underline hover:text-[#CC3333] px-4  te text-center hover:underline hover:text-[#CC3333]  text-2xl ">CHIMBAL MENU</a>
-          :    <a href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">MENU CHIMBAL </a>     }
-          </div>
-         
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
-          { isInEnglish ?
-          <a href="#" id='sobre' className="ç py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333]  text-center text-2xl ">MODULES FOR CATS</a>
-          :    <a href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">MÓDULOS PARA GATOS </a>     }
-          </div>
-
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
-          { isInEnglish ?
-          <a href="#" id='sobre' className="ç py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">X-STRIKE</a>
-          :    <a href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">X-STRIKE </a>     }
-          </div>
-
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
-             { isInEnglish ?
-          <a href="#" id='sobre' className="ç py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333]  text-center text-2xl ">ZINE GISELLE</a>
-          :    <a href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">ZINE GISELLE </a>     }
+          <a  onClick={() => toggleMenu()} href="#" id='sobre' className="ç py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333]  text-center text-4xl ">PROJECTS</a>
+          :    <a href="#" id='sobre'  onClick={() => toggleMenu()} className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-4xl ">PROJETOS </a>     }
           </div>
          
+          <div className="py-1 px-4 flex w-4/4 justify-center border-gray-700">
+          { isInEnglish ?
+          <a  onClick={() => toggleMenu()} href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-4xl ">CONTACT </a>
+         
+:    <a  onClick={() => toggleMenu()} href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-4xl ">CONTATO </a>     }
+          </div> 
+         
+          
 
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
-             { isInEnglish ?
-          <a href="#" id='sobre' className="ç py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">HILTON</a>
-          :    <a href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">HILTON </a>     }
+          <div className="py-1 px-4 flex w-4/4 justify-center border-gray-700">
+          { isInEnglish ?
+          <a  onClick={() => toggleMenu()} href="#" id='sobre' className="ç py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-4xl ">GALLERY</a>
+          :    <a href="#"  onClick={() => toggleMenu()} id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-4xl ">GALERIA </a>     }
           </div>
 
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
-             { isInEnglish ?
-          <a href="#" id='sobre' className="ç py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">CARAÍVA</a>
-          :    <a href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">CARAÍVA </a>     }
-          </div>
-
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
-             { isInEnglish ?
-          <a href="#" id='sobre' className="ç py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">CROQUIS BH</a>
-          :    <a href="#" id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">CROQUIS BH </a>     }
-          </div>
+         
 
          
           
@@ -99,7 +78,7 @@ const { isMenuOpen, toggleMenu } = useMenu();
 
 {/* Aparece em telas pequenas */}
   <div className='md:hidden flex w-screen   '>
-      <div className='flex  w-1/2 justify-start pt-10'>
+      <div className='flex  w-1/2 justify-start pt-7'>
       <a className='z-20 ' onClick={() => toggleMenu()}>
     <svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81.53 300 " className={`size-20 ${isMenuOpen ? "fill-white" : "fill-black"} `}>
     <g transform='translate(0,0)'>
@@ -115,7 +94,7 @@ const { isMenuOpen, toggleMenu } = useMenu();
     </a>
       </div>
       
-    <div className='flex  w-1/2 pl-20 pt-3 justify-center items-center'>
+    <div className='flex  w-1/2 pl-20  justify-center items-center'>
     {isInEnglish ? <button onClick={()=> changeLanguage()} style={{ backgroundColor: "white" }}  className='h-10 w-15 rounded-lg underline hover:italic text-neutral-950 bg-[#CC3333]'>PT  </button>
 : <button style={{ backgroundColor: "white" }} onClick={()=> changeLanguage()} className='h-10 w-15 rounded-lg underline hover:italic text-neutral-950 bg-[#CC3333]'>EN  </button>}
      
@@ -128,54 +107,33 @@ const { isMenuOpen, toggleMenu } = useMenu();
         exit={{ opacity: 0, y: 30 }} // Sai suavemente ao fechar
         transition={{ duration: 1.0 }} // Tempo da animação 
         className="fixed h-full bg-neutral-950 left-0 top-0 z-10 w-screen  text-white flex flex-col justify-center items-center  ">
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
-          { isInEnglish ?
-          <a href="#" id='sobre' className=" py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">CASA ÂMBAR</a>
-          :    <a href="#" id='sobre' className=" font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">CASA ÂMBAR </a>     }
-          </div>
 
           <div className="py-1 px-4 flex w-4/4  border-gray-700">
           { isInEnglish ?
-          <a href="#" id='sobre' className="py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">CHIMBAL MENU</a>
-          :    <a href="#" id='sobre' className="font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">MENU CHIMBAL </a>     }
+          <Link to="/Sobre"><a href="#"  onClick={() => toggleMenu()} id='sobre' className="ç py-2 font-elza hover:italic hover:underline hover:text-[#CC3333] px-4  te text-center hover:underline hover:text-[#CC3333]  text-2xl ">ABOUT ME</a></Link>
+          :   <Link to="/Sobre"> <a href="#" id='sobre'  onClick={() => toggleMenu()} className="ç font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">SOBRE </a> </Link>    }
           
           </div>
          
           <div className="py-1 px-4 flex w-4/4  border-gray-700">
           { isInEnglish ?
-          <a href="#" id='sobre' className="py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">MODULES FOR CATS</a>
-          :    <a href="#" id='sobre' className="font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">MÓDULOS PARA GATOS </a>     }
+          <a href="#" id='sobre' className="py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">PROJECTS</a>
+          :    <a href="#" id='sobre' className="font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">PROJETOS </a>     }
           </div>
 
           <div className="py-1 px-4 flex w-4/4  border-gray-700">
           { isInEnglish ?
-          <a href="#" id='sobre' className="py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">X-STRIKE</a>
-          :    <a href="#" id='sobre' className="font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">X-STRIKE </a>     }
+          <a href="#" id='sobre' className="py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">CONTACT</a>
+          :    <a href="#" id='sobre' className="font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">CONTATO </a>     }
                    </div>
 
           <div className="py-1 px-4 flex w-4/4  border-gray-700">
           { isInEnglish ?
-          <a href="#" id='sobre' className="py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">ZINE GISELLE</a>
-          :    <a href="#" id='sobre' className="font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">ZINE GISELLE </a>     }
+          <a href="#" id='sobre' className="py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">GALLERY</a>
+          :    <a href="#" id='sobre' className="font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">GALERIA </a>     }
           </div>
 
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
-          { isInEnglish ?
-          <a href="#" id='sobre' className="py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">HILTON</a>
-          :    <a href="#" id='sobre' className="font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">HILTON </a>     }
-          </div>
-
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
-          { isInEnglish ?
-          <a href="#" id='sobre' className="py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">CARAÍVA</a>
-          :    <a href="#" id='sobre' className="font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">CARAÍVA </a>     }
-          </div>
-
-          <div className="py-1 px-4 flex w-4/4  border-gray-700">
-          { isInEnglish ?
-          <a href="#" id='sobre' className="py-2 px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-2xl ">CROQUIS BH</a>
-          :    <a href="#" id='sobre' className="font-elza hover:italic hover:underline hover:text-[#CC3333] py-2 px-4  text-center text-2xl ">CROQUIS BH </a>     }
-          </div>
+          
           
         </motion.div>
       )}

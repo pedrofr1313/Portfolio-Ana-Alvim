@@ -5,7 +5,7 @@ import { motion } from "motion/react"
 import './App.css'
 import NavBar from './components/NavBar'
 
-
+import SobreMim from './pages/SobreMim'
 import { MenuProvider } from './hooks/MenuContext'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './pages/Home'
@@ -17,16 +17,16 @@ function App() {
   return (
 <div className='w-full p-0 m-0 '>
 <MenuProvider>
-  <LanguageProvider>
+<LanguageProvider>
 <BrowserRouter>
 
  <NavBar/>
  
 
  <Routes>
-  <Route path="/" element={<Home/>}>
-
-  </Route>
+  <Route path="/" element={<Home/>}/>
+  <Route path="/Sobre" element={<SobreMim/>} />
+  
  </Routes>
  
  </BrowserRouter>

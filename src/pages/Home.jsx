@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../components/Logo";
-import SobreMim from "../components/SobreMim";
+
 
 import { useEffect } from "react";
 import AnimatedSvg from "../components/AnimatedSvg";
@@ -56,7 +56,7 @@ const Home = () => {
           </div>
         </div>
   </div>
-    <SobreMim/>
+    
     
     </div>
   );
