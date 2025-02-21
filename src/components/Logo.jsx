@@ -16,6 +16,7 @@ const Logo = () => {
     fill={"black"}
     stroke={"black"}
     y={-12}
+   x={0}
      /> 
     
      
@@ -32,7 +33,9 @@ const Logo = () => {
    size={"size-15"}
    fill={"black"}
    stroke={"black"}
-   y={-17} />
+   y={-16} 
+   transform={""}
+   x={"0"}/>
       </div>
 
    </div>
