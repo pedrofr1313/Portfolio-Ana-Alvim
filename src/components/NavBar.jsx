@@ -71,6 +71,7 @@ const { isMenuOpen, toggleMenu } = useMenu();
           <a  onClick={() => toggleMenu()} href="#" id='sobre' className="ç  px-4 font-elza hover:italic hover:underline hover:text-[#CC3333] te text-center text-4xl ">GALLERY</a>
           :    <a href="#"  onClick={() => toggleMenu()} id='sobre' className="ç font-elza hover:italic hover:underline hover:text-[#CC3333]  px-4  text-center text-4xl ">GALERIA </a>     }
           </div>
+          
 
          
 

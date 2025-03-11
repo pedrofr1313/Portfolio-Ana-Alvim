@@ -6,6 +6,8 @@ import AnimatedFlower from "../components/AnimatedFlower";
 import BalletSection from "../components/BalletSection";
 import { useMenu } from '../hooks/MenuContext'
 import { useEffect,useState } from "react";
+import HiltonSection from "../components/HiltonSection";
+import SecaoMenu from "../components/SecaoMenu";
 const SobreMim = () => {
    const{isMenuOpen} =useMenu();
     useEffect(() => {
@@ -57,7 +59,7 @@ const SobreMim = () => {
       exit={{ opacity: 0, y: -1000 }} // Sai suavemente ao fechar
       transition={{ duration: 1.5, delay:1.5 }}>
 
-     <div className="flex w-60/100 justify-start h-78/100  ">
+     <div className="flex w-60/100 justify-start h-auto ">
      <p className="text-black text-xs w-85/100 text-left ">
      Por isso, hoje sou bailarina e trabalho com design e arte. <br /> <br /> Comecei a trabalhar aos 17 anos fazendo encomendas de 
      desenhos para pessoas que me conheciam e encontrei uma rede de demanda pelo meu trabalho, o que me incentivou a continuar estudando e aprimorando minhas habilidades.
@@ -84,6 +86,9 @@ const SobreMim = () => {
       </motion.div>
 
     <BalletSection/>
+    <HiltonSection/>
+    <SecaoMenu/>
+
 
     </div >
   );

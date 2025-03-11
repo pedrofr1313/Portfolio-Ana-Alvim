@@ -5,7 +5,7 @@ import AnimatedSpiral from './AnimatedSpiral'
 
 const BalletSection = () => {
   return (
-    <motion.div className='h-50 mb-100 w-90/100 justify-center flex'
+    <motion.div className='h-50  w-90/100 justify-center flex'
     initial={{ opacity: 0, x: -100 }} 
       animate={{ opacity: 1, x: 0 }} // Aparece suavemente
       exit={{ opacity: 0, y: -1000 }} // Sai suavemente ao fechar
